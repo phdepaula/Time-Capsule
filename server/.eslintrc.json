@@ -1,5 +1,7 @@
 {
     "extends": [
-        "@rocketseat/eslint-config/node"
+        "@rocketseat/eslint-config/node",
+        "@react-native-community",
+        "prettier"
     ]
 }
