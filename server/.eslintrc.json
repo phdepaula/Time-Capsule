@@ -3,5 +3,8 @@
         "@rocketseat/eslint-config/node",
         "@react-native-community",
         "prettier"
-    ]
+    ],
+    "rules": {
+        "camelcase": "off"
+    }
 }
