@@ -1,3 +1,8 @@
 node_modules
-# Keep environment variables out of version control
 .env
+**/uploads/**.png
+**/uploads/**.jpeg
+**prisma/migrations/**
+dev.db
+dev.db-journal
+migration_lock.toml
