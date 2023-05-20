@@ -1,26 +1,27 @@
-import { ImageBackground } from 'react-native'
 import { styled } from 'nativewind'
-import { SplashScreen, Stack } from 'expo-router'
-import { StatusBar } from 'expo-status-bar'
-import * as SecureStore from 'expo-secure-store'
-import { useEffect, useState } from 'react'
+import { ImageBackground } from 'react-native'
 
 import {
   useFonts,
   Roboto_400Regular,
   Roboto_700Bold,
 } from '@expo-google-fonts/roboto'
+
 import { BaiJamjuree_700Bold } from '@expo-google-fonts/bai-jamjuree'
 
 import blurBg from '../src/assets/bg-blur.png'
 import Stripes from '../src/assets/stripes.svg'
+import { SplashScreen, Stack } from 'expo-router'
+import { StatusBar } from 'expo-status-bar'
+import * as SecureStore from 'expo-secure-store'
+import { useEffect, useState } from 'react'
 
 const StyledStripes = styled(Stripes)
 
 export default function Layout() {
-  const [isUserAuthenticated, setIsUserAuthenticate] = useState<null | boolean>(
-    null,
-  )
+  const [isUserAuthenticated, setIsUserAuthenticated] = useState<
+    null | boolean
+  >(null)
 
   const [hasLoadedFonts] = useFonts({
     Roboto_400Regular,
@@ -29,8 +30,8 @@ export default function Layout() {
   })
 
   useEffect(() => {
-    SecureStore.getItemAsync('toen').then((token) => {
-      setIsUserAuthenticate(!!token)
+    SecureStore.getItemAsync('token').then((token) => {
+      setIsUserAuthenticated(!!token)
     })
   }, [])
 
@@ -41,7 +42,7 @@ export default function Layout() {
   return (
     <ImageBackground
       source={blurBg}
-      className="relative flex-1 items-center bg-gray-900"
+      className="relative flex-1 bg-gray-900"
       imageStyle={{ position: 'absolute', left: '-100%' }}
     >
       <StyledStripes className="absolute left-2" />
@@ -51,11 +52,12 @@ export default function Layout() {
         screenOptions={{
           headerShown: false,
           contentStyle: { backgroundColor: 'transparent' },
+          animation: 'fade',
         }}
       >
         <Stack.Screen name="index" redirect={isUserAuthenticated} />
-        <Stack.Screen name="new" />
         <Stack.Screen name="memories" />
+        <Stack.Screen name="new" />
       </Stack>
     </ImageBackground>
   )
