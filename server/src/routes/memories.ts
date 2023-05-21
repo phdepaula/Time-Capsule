@@ -1,6 +1,6 @@
 import { FastifyInstance } from 'fastify'
+import { z } from 'zod'
 import { prisma } from '../lib/prisma'
-import { z } from 'zod' 
 
 export async function memoriesRoutes(app: FastifyInstance) {
   app.addHook('preHandler', async (request) => {
@@ -12,16 +12,17 @@ export async function memoriesRoutes(app: FastifyInstance) {
       where: {
         userId: request.user.sub,
       },
-      orderBy:{
-        createAt: 'asc',
-      }
+      orderBy: {
+        createdAt: 'asc',
+      },
     })
 
-    return memories.map(memory => {
+    return memories.map((memory) => {
       return {
         id: memory.id,
-        coverUrl: memory.coverURL,
-        excerpt: memory.content.substring(0, 115).concat('...')
+        coverUrl: memory.coverUrl,
+        excerpt: memory.content.substring(0, 115).concat('...'),
+        createdAt: memory.createdAt,
       }
     })
   })
@@ -39,7 +40,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
       },
     })
 
-    if (!memory.isPublic && memory.userId != request.user.sub ){
+    if (!memory.isPublic && memory.userId !== request.user.sub) {
       return reply.status(401).send()
     }
 
@@ -49,16 +50,16 @@ export async function memoriesRoutes(app: FastifyInstance) {
   app.post('/memories', async (request) => {
     const bodySchema = z.object({
       content: z.string(),
-      coverURL: z.string(),
+      coverUrl: z.string(),
       isPublic: z.coerce.boolean().default(false),
     })
 
-    const {content, coverURL, isPublic } = bodySchema.parse(request.body)
+    const { content, coverUrl, isPublic } = bodySchema.parse(request.body)
 
     const memory = await prisma.memory.create({
       data: {
         content,
-        coverURL,
+        coverUrl,
         isPublic,
         userId: request.user.sub,
       },
@@ -76,19 +77,19 @@ export async function memoriesRoutes(app: FastifyInstance) {
 
     const bodySchema = z.object({
       content: z.string(),
-      coverURL: z.string(),
+      coverUrl: z.string(),
       isPublic: z.coerce.boolean().default(false),
     })
 
-    const {content, coverURL, isPublic } = bodySchema.parse(request.body)
+    const { content, coverUrl, isPublic } = bodySchema.parse(request.body)
 
     let memory = await prisma.memory.findUniqueOrThrow({
       where: {
         id,
-      }
+      },
     })
 
-    if(memory.userId != request.user.sub){
+    if (memory.userId !== request.user.sub) {
       return reply.status(401).send()
     }
 
@@ -98,7 +99,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
       },
       data: {
         content,
-        coverURL,
+        coverUrl,
         isPublic,
       },
     })
@@ -116,10 +117,10 @@ export async function memoriesRoutes(app: FastifyInstance) {
     const memory = await prisma.memory.findUniqueOrThrow({
       where: {
         id,
-      }
+      },
     })
 
-    if(memory.userId != request.user.sub){
+    if (memory.userId !== request.user.sub) {
       return reply.status(401).send()
     }
 
