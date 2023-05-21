@@ -1,18 +1,18 @@
 import {
   Image,
-  Text,
+  ScrollView,
   Switch,
+  Text,
+  TextInput,
   TouchableOpacity,
   View,
-  TextInput,
-  ScrollView,
 } from 'react-native'
 import Icon from '@expo/vector-icons/Feather'
 
+import NLWLogo from '../src/assets/nlw-spacetime-logo.svg'
 import { Link, useRouter } from 'expo-router'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import React, { useState } from 'react'
-import NLWLOGO from '../src/assets/nlw-spacetime-logo.svg'
+import { useState } from 'react'
 import * as ImagePicker from 'expo-image-picker'
 import * as SecureStore from 'expo-secure-store'
 import { api } from '../src/lib/api'
@@ -22,6 +22,7 @@ export default function NewMemory() {
   const router = useRouter()
 
   const [preview, setPreview] = useState<string | null>(null)
+
   const [content, setContent] = useState('')
   const [isPublic, setIsPublic] = useState(false)
 
@@ -86,11 +87,11 @@ export default function NewMemory() {
       contentContainerStyle={{ paddingBottom: bottom, paddingTop: top }}
     >
       <View className="mt-4 flex-row items-center justify-between">
-        <NLWLOGO />
+        <NLWLogo />
 
         <Link href="/memories" asChild>
-          <TouchableOpacity className='"h-10 w-10 items-center justify-center rounded-full bg-purple-500'>
-            <Icon name="arrow-left" size={16} color="#FFF" />
+          <TouchableOpacity className="h-10 w-10 items-center justify-center rounded-full bg-purple-500">
+            <Icon name="arrow-left" size={16} color="#fff" />
           </TouchableOpacity>
         </Link>
       </View>
@@ -121,7 +122,7 @@ export default function NewMemory() {
           ) : (
             <View className="flex-row items-center gap-2">
               <Icon name="image" color="#fff" />
-              <Text className="font-body text-sm text-gray-200">
+              <Text className="text-sm font-bold text-gray-200">
                 Adicionar foto ou vídeo de capa
               </Text>
             </View>
