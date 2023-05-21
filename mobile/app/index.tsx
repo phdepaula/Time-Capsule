@@ -17,7 +17,7 @@ const discovery = {
 export default function App() {
   const router = useRouter()
 
-  const [request, response, signInWithGithub] = useAuthRequest(
+  const [, response, signInWithGithub] = useAuthRequest(
     {
       clientId: 'eba5404802e78bf0f9f6',
       scopes: ['identity'],
