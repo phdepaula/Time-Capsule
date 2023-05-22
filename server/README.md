@@ -1,12 +1,12 @@
-# **Server**
+# ⚙️ **Server**
 
 Directory with all back-end configurations developed for the project.
 
-# **Required Settings**
+## 🛠️ **Required Settings**
 
 For the project to work, it is necessary to guarantee all the configurations described in this section.
 
-## Global Variables
+### 🌐 Global Variables
 Create a local file named .env in the root directory (server) defining global variables.
 
 The following variables must be defined in the file:
@@ -25,7 +25,7 @@ GITHUB_CLIENT_ID="your_client_id_mobile"
 GITHUB_CLIENT_SECRET="your_client_secret_mobile"
 ```
 
-## Libs to be Installed
+### 📖 Libs to be Installed
 Access the root directory (server) through the terminal and execute:
 ```
 npm init -y
@@ -47,13 +47,13 @@ npm i @fastify/multipart
 npm i @fastify/static
 ```
 
-## Database Creation
+### 🆕 Database Creation
 Access the root directory (server) through the terminal and execute:
 ```
 npx prisma init --datasource-provider SQLite
 npx prisma migrate dev
 ```
-# **How to Run**
+## ▶️ **How to Run**
 Access the root directory (server) through the terminal and execute:
 ```
 npm run dev

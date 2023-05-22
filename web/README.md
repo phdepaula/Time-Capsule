@@ -1,12 +1,12 @@
-# **Web**
+# 💻 **Web**
 
-Directory with all web configurations developed for the project.
+Directory with all front-end web configurations developed for the project.
 
-# **Required Settings**
+## 🛠️ **Required Settings**
 
 For the project to work, it is necessary to guarantee all the configurations described in this section.
 
-## Global Variables
+### 🌐 Global Variables
 Create a local file named .env.local in the root directory (web) defining global variables.
 
 The following variables must be defined in the file:
@@ -18,7 +18,7 @@ The following variables must be defined in the file:
 NEXT_PUBLIC_GITHUB_CLIENT_ID=your_client_id_web
 ```
 
-## Libs to be Installed
+### 📖 Libs to be Installed
 Access the root directory (web) through the terminal and execute:
 ```
 npx create-next-app@latest web --use-npm
@@ -33,7 +33,7 @@ npm i --save-dev @types/js-cookie
 npm i dayjs
 ```
 
-# **How to Run**
+## ▶️ **How to Run**
 Access the root directory (web) through the terminal and execute:
 
 > **It is necessary to comment out the mobile global variables defined in the .env file inside server. Thus, only the web application's client_id and client_secret will be loaded.**
