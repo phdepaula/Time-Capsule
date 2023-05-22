@@ -9,7 +9,7 @@ For the project to work, it is necessary to guarantee all the configurations des
 ## Global Variables
 Create a local file named .env defining global variables.
 
-Within it the following variables must be defined in the file .env:
+The following variables must be defined in the file:
 
 > **First you will need a GitHub account and then two oAuth Apps created for web and mobile applications.**
 
