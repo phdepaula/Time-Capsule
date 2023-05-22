@@ -29,7 +29,7 @@ npm i dayjs
 # **How to Run**
 Access the root directory (mobile) through the terminal and execute:
 
-It is necessary to comment out the web global variables defined in the .env file inside server. Thus, only the mobile application's client_id and client_secret will be loaded.
+> It is necessary to comment out the web global variables defined in the .env file inside server. Thus, only the mobile application's client_id and client_secret will be loaded.
 ```
 npm run start
 ```
