@@ -33,6 +33,6 @@ Access the root directory (mobile) through the terminal and execute:
 ```
 npm run start
 ```
-> **The application will be running in http://localhost:3000.**
+> **To access the application, download the expo go app on your cell phone and scan the QR code or download the ios or android emulator on your machine.**
 
 

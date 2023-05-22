@@ -1,4 +1,4 @@
-# 🚀 Spacetime Project - NLW Rocketseat
+# 🚀 Time Capsule Project - Rocketseat's NLW Spacetime
 
 Mobile/Web project developed during Rocketseat's NLW Spacetime.
 
