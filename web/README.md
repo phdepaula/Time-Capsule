@@ -7,7 +7,7 @@ Directory with all web configurations developed for the project.
 For the project to work, it is necessary to guarantee all the configurations described in this section.
 
 ## Global Variables
-Create a local file named .env.local root directory (web) defining global variables.
+Create a local file named .env.local in the root directory (web) defining global variables.
 
 The following variables must be defined in the file:
 

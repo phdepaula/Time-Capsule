@@ -1,6 +1,6 @@
 # **Server**
 
-Directory with all API's configurations developed for the project.
+Directory with all back-end configurations developed for the project.
 
 # **Required Settings**
 
