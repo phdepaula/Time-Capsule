@@ -10,6 +10,7 @@ For the project to work, it is necessary to guarantee all the configurations des
 Create a local file named .env in the root directory (server) defining global variables.
 
 The following variables must be defined in the file:
+> **First you will need a GitHub account and then two oAuth Apps created for web and mobile applications.**
 
 ```
 # Database
@@ -23,7 +24,6 @@ GITHUB_CLIENT_SECRET="your_client_secret_web"
 GITHUB_CLIENT_ID="your_client_id_mobile"
 GITHUB_CLIENT_SECRET="your_client_secret_mobile"
 ```
-> **First you will need a GitHub account and then two oAuth Apps created for web and mobile applications.**
 
 ## Libs to be Installed
 Access the root directory (server) through the terminal and execute:
