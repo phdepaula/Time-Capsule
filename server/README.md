@@ -11,7 +11,7 @@ Create a local file named .env defining global variables.
 
 Within it the following variables must be defined in the file .env:
 
-> First, you will need a GitHub account and then create two oAuth Apps, one for the web application and the other for the mobile application.
+> First you will need a GitHub account and then two oAuth Apps created for web and mobile applications.
 
 ```
 # Database

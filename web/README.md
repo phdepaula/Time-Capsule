@@ -9,9 +9,9 @@ For the project to work, it is necessary to guarantee all the configurations des
 ## Global Variables
 Create a local file named .env.local defining global variables.
 
-Within it the following variables must be defined in the file .env:
+The following variables must be defined in the file:
 
-> First, you will need a GitHub account and then one oAuth Apps created for the web application.
+> First you will need a GitHub account and then one oAuth Apps created for the web application.
 
 ```
 # GitHub
@@ -35,6 +35,8 @@ npm i dayjs
 
 # **How to Run**
 Access the root directory (web) through the terminal and execute:
+
+> It is necessary to comment out the mobile global variables defined in the .env file inside server. Thus, only the web application's client_id and client_secret will be loaded.
 ```
 npm run dev
 ```
