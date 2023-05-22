@@ -1,4 +1,4 @@
-# 💻 Spacetime Project - NLW Rocketseat
+# 🚀 Spacetime Project - NLW Rocketseat
 
 Mobile/Web project developed during Rocketseat's NLW Spacetime.
 
