@@ -7,7 +7,6 @@ Directory with all web configurations developed for the project.
 For the project to work, it is necessary to guarantee all the configurations described in this section.
 
 ## Global Variables
----
 Create a local file named .env.local defining global variables.
 
 Within it the following variables must be defined in the file .env:
@@ -20,7 +19,6 @@ NEXT_PUBLIC_GITHUB_CLIENT_ID=your_client_id_web
 ```
 
 ## Libs to be Installed
----
 Access the root directory (web) through the terminal and execute:
 ```
 npx create-next-app@latest web --use-npm

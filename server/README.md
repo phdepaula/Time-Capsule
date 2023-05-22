@@ -7,7 +7,6 @@ Directory with all API's configurations developed for the project.
 For the project to work, it is necessary to guarantee all the configurations described in this section.
 
 ## Global Variables
----
 Create a local file named .env defining global variables.
 
 Within it the following variables must be defined in the file .env:
@@ -28,7 +27,6 @@ GITHUB_CLIENT_SECRET="your_client_secret_mobile"
 ```
 
 ## Libs to be Installed
----
 Access the root directory (server) through the terminal and execute:
 ```
 npm init -y
@@ -51,7 +49,6 @@ npm i @fastify/static
 ```
 
 ## Database Creation
----
 Access the root directory (server) through the terminal and execute:
 ```
 npx prisma init --datasource-provider SQLite

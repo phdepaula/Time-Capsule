@@ -7,7 +7,6 @@ Directory with all mobile configurations developed for the project.
 For the project to work, it is necessary to guarantee all the configurations described in this section.
 
 ## Libs to be Installed
----
 Access the root directory (mobile) through the terminal and execute:
 ```
 npx create-expo-app mobile
